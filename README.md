@@ -1,4 +1,25 @@
-#### Guide on starting and running Nebula Graph
+# Graph RAG with GCP and LlamaIndex
+
+Forked off of this example:
+<a href="https://colab.research.google.com/github/run-llama/llama_index/blob/main/docs/docs/examples/query_engine/knowledge_graph_rag_query_engine.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
+Do Graph RAG with GCP Tooling
+
+![](./graph_output.png)
+
+# Poetry dependency installation guide
+
+Make sure poetry is installed
+
+Run for requirements
+
+```bash
+poetry shell
+poetry install
+```
+
+# Guide on starting and running Nebula Graph
+
 
 ##### Prerequisites
 
