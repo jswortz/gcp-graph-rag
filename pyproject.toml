@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "gcp-graph-rag"
+version = "0.1.0"
+description = ""
+authors = ["Jeremy Wortz <jwortz@google.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+llama-index = "^0.11.20"
+llama-index-graph-stores-nebula = "^0.3.0"
+llama-index-llms-vertex = "^0.3.7"
+jupyter = "^1.1.1"
+google-auth = {extras = ["aiohttp"], version = "^2.35.0"}
+google = "^3.0.0"
+python-dotenv = "^1.0.1"
+nebula3-python = "^3.8.3"
+ipython-ngql = "^0.14.3"
+llama-index-readers-wikipedia = "^0.2.0"
+wikipedia = "^1.4.0"
+networkx = "^3.4.2"
+pyvis = "^0.3.2"
+jupyter-nebulagraph = "^0.14.3"
+google-api-core = "^2.22.0"
+black = "^24.10.0"
+
+[tool.poetry.group.dev.dependencies]
+pandas = "^2.2.3"
+llama-index-embeddings-vertex = "^0.2.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
