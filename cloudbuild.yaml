@@ -1,0 +1,12 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [
+    'build', '-t',
+    'us-central1-docker.pkg.dev/wortz-project-352116/$REPO_NAME/nebula-graph:$TAG_NAME',
+    '--cache-from',
+    'us-central1-docker.pkg.dev/wortz-project-352116/$REPO_NAME/nebula-graph:$TAG_NAME',
+    '.'
+  ]
+  automapSubstitutions: true
+images:
+- 'us-central1-docker.pkg.dev/wortz-project-352116/$REPO_NAME/nebula-graph:$TAG_NAME'
