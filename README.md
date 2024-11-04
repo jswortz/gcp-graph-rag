@@ -20,6 +20,30 @@ poetry install
 
 # Guide on starting and running Nebula Graph
 
+## Compute Engine Guide
+
+
+```bash
+source .env
+```
+
+Then run 
+
+
+```bash
+gcloud compute instances create $VM_NAME \
+--image-project=debian-cloud \
+--image-family=debian-12 \
+--metadata-from-file=startup-script=nebula_startup.sh
+```
+
+And then create the instance
+
+Note the external IP Address create a secret:
+
+```bash
+printf xxx.xxx.xxx.xxx | gcloud secrets create nebula-ip --data-file=-
+```
 
 ##### Prerequisites
 
@@ -34,16 +58,7 @@ ADD HOSTS 127.0.0.1:9779
 
 #### Deployment to Cloud
 
-```bash
-gcloud auth configure-docker \
-    us-central1-docker.pkg.dev
-```
 
-Then run Cloud Build
-
-```bash
-source .env && gcloud builds submit --config cloudbuild.yaml . --substitutions=REPO_NAME=$REPO_NAME,TAG_NAME=$TAG_NAME
-```
 
 ##### Manual Nebula Installation Instructions
 
