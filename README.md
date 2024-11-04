@@ -11,6 +11,13 @@ Do Graph RAG with GCP Tooling
 
 Make sure poetry is installed
 
+```bash
+pip install poetry
+```
+
+Change `.env` file to your GCP project metadata
+
+
 Run for requirements
 
 ```bash
