@@ -5,6 +5,10 @@ Forked off of this example:
 
 Do Graph RAG with GCP Tooling
 
+This shows how to create a knowlege graph with llamaindex and Gemini 1.5. This uses llamaindex's `PropertyGraphIndex` [class](https://docs.llamaindex.ai/en/stable/module_guides/indexing/lpg_index_guide/), which can out-of-the-box define knowledge graphs.
+
+Additonally, you can define custom entities and relationships with `PropertyGraphIndex`, using either the `DynamicLLMPathExtractor` [link](https://docs.llamaindex.ai/en/stable/module_guides/indexing/lpg_index_guide/#dynamicllmpathextractor), or the more rigid `SchemaLLMPathExtractor` [link](https://docs.llamaindex.ai/en/stable/module_guides/indexing/lpg_index_guide/#schemallmpathextractor)
+
 ![](./graph_output.png)
 
 # Poetry dependency installation guide
