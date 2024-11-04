@@ -9,4 +9,4 @@ dpkg -i nebula-graph-3.8.0.ubuntu1804.amd64.deb
 wget https://github.com/vesoft-inc/nebula-console/releases/download/v3.8.0/nebula-console-linux-amd64-v3.8.0
 cp nebula-console-linux-amd64-v3.8.0 /usr/local/nebula/bin/nebula-console
 chmod a+x /usr/local/nebula/bin/nebula-console
-/usr/local/nebula/bin/nebula-console root -p nebula -e "ADD HOSTS storaged0:9779"
+/usr/local/nebula/bin/nebula-console -u root -p nebula -port 9669 -addr 127.0.0.1 -e "ADD HOSTS 127.0.0.1:9779"

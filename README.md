@@ -20,7 +20,7 @@ poetry install
 
 # Guide on starting and running Nebula Graph
 
-## Compute Engine Guide
+## Deploy to Compute Engine
 
 
 ```bash
@@ -45,7 +45,25 @@ Note the external IP Address create a secret:
 printf xxx.xxx.xxx.xxx | gcloud secrets create nebula-ip --data-file=-
 ```
 
-##### Prerequisites
+or to update,
+
+```bash
+... | gcloud secrets versions add nebula-ip --data-file=-
+```
+
+Lastly, ssh into the new VM and run the following:
+
+```bash
+/usr/local/nebula/bin/nebula-console -u root -p nebula -port 9669 -addr 127.0.0.1
+```
+
+In the console,
+
+```sql
+ADD HOSTS 127.0.0.1:9779
+```
+
+#### Manual Installation Instructions
 
 [Installation](https://docs.nebula-graph.io/3.8.0/2.quick-start/2.install-nebula-graph/)
 [Nebula Console Installation](https://github.com/vesoft-inc/nebula-console)
@@ -55,12 +73,7 @@ printf xxx.xxx.xxx.xxx | gcloud secrets create nebula-ip --data-file=-
 ADD HOSTS 127.0.0.1:9779
 ```
 
-
-#### Deployment to Cloud
-
-
-
-##### Manual Nebula Installation Instructions
+### Manual Installation Instructions
 
 1. Start the server
 
